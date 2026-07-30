@@ -35,6 +35,15 @@ Open VS Code with ```code . ```( launches Visual Studio Code inside that specifi
 5. Back in terminal command prompt at the top of folder: <br>
 ```\ai-blog-assistant> composer require openai-php/laravel ```(Utilizes the PHP dependency manager Composer to pull down the official community-maintained OpenAI PHP for Laravel package into your vendor file directory.) |1. "OpenAI PHP for Laravel" | https://laravel-news.com/package/openai-php-laravel | 2. "Packagist" Sandro Gehri - Nuno Maduro | https://packagist.org/packages/openai-php/laravel | 3. https://github.com/openai-php/laravel/blob/main/README.md |  <br>
 6. ``` php artisan openai:install``` (Executes a package-specific command that copies a global openai.php configuration file directly into your application's /config)| "Get Started" | Sandro Gehri - Nuno Maduro | https://packagist.org/packages/openai-php/laravel<br>
+Is config\services.php needed?
+```
+'openai' => [
+    'key' => env('OPENAI_API_KEY'),
+    'url' => env('OPENAI_API_URL', 'https://api.openai.com/v1'),
+    'model' => env('OPENAI_MODEL', 'gpt-4o-mini'),
+],
+```
+No, it's not needed to manually add that code to config/services.php because you installed the official openai-php/laravel integration package.  When you ran the installation command "php artisan openai:install", the package automatically generated a brand-new, dedicated configuration file located at config/openai.php.  The package is pre-configured to look directly inside your .env file for the OPENAI_API_KEY variable. It initializes its own API clients using that specific file, completely bypassing the need to use Laravel's generic config/services.php array.  The package uses a Laravel Service Provider behind the scenes. When the application boots up, this provider reads from config/openai.php and automatically registers the OpenAI client into Laravel's service container. This is what allows the OpenAI::chat()->create() Facade to work smoothly anywhere in the code without any manual configuration wiring.
 -```OpenAI for Laravel, starring it on GitHub? no``` <br>
 7. Open the .env file and add the API Key.
  ```
