@@ -18,22 +18,22 @@ A full-stack Laravel web application that leverages artificial intelligence to h
 1. Start Laravel Herd Application <br>
 2. cd Herd (Changes your terminal's current directory to the folder where Laravel Herd manages your local sites.) <br>
 3. laravel new ai-blog-assistant (Create your new Laravel project framework, bootstrap a new framework skeleton) | "Creating An Application Using A Starter Kit" | https://laravel.com/docs/13.x/starter-kits  <br>
-****Update now? No**** <br>
-Starter Kit? None (Skips installing pre-packaged UI frameworks like Laravel Breeze or Jetstream so you can build your front end from scratch.) <br>
-Testing Framework? Pest (Configures your testing suite to utilize Pest PHP, a highly expressive, elegant PHP testing framework.) <br>
-Laravel Boost AI? No <br>
-Which Database? mysql (mysql: Modifies your application's .env configuration file to immediately target a MySQL database engine.) <br>
-run the default database migration? no <br>
-run npm install --ignore-scripts and npm run build? yes (Automatically triggers Node Package Manager (npm) to fetch UI compilation dependencies and run a production build via the asset bundler Vite.) <br>
+-Update now? No <br>
+-Starter Kit? None (Skips installing pre-packaged UI frameworks like Laravel Breeze or Jetstream so you can build your front end from scratch.) <br>
+-Testing Framework? Pest (Configures your testing suite to utilize Pest PHP, a highly expressive, elegant PHP testing framework.) <br>
+-Laravel Boost AI? No <br>
+-Which Database? mysql (Modifies your application's .env configuration file to immediately target a MySQL database engine.) <br>
+-run the default database migration? no <br>
+-run npm install --ignore-scripts and npm run build? yes (Automatically triggers Node Package Manager (npm) to fetch UI compilation dependencies and run a production build via the asset bundler Vite.) <br>
 4. cd ai-blog-assistant  (Moves your command line context directly into the root folder of the newly built app) <br>
 Open VS Code with code . ( launches Visual Studio Code inside that specific environment) <br>
-5. back in terminal command prompt at the top of folder: <br>
+5. Back in terminal command prompt at the top of folder: <br>
 \ai-blog-assistant> composer require openai-php/laravel (Utilizes the PHP dependency manager Composer to pull down the official community-maintained OpenAI PHP for Laravel package into your vendor file directory.) |1. "OpenAI PHP for Laravel" | https://laravel-news.com/package/openai-php-laravel | 2. "Packagist" Sandro Gehri - Nuno Maduro | https://packagist.org/packages/openai-php/laravel | 3. https://github.com/openai-php/laravel/blob/main/README.md |  <br>
 6. php artisan openai:install (Executes a package-specific command that copies a global openai.php configuration file directly into your application's /config)| "Get Started" | Sandro Gehri - Nuno Maduro | https://packagist.org/packages/openai-php/laravel<br>
-OpenAI for Laravel, starring it on GitHub? no <br>
-7. \Herd\ai-blog-assistant>php artisan make:model Blog -m (This dual-purpose Laravel Artisan Model Generator creates an Eloquent data model class called Blog. The -m flag instructs Laravel to automatically generate a matching database schema file (a migration script) inside database/migrations/)| https://laravel.com/docs/13.x/eloquent<br>
+-OpenAI for Laravel, starring it on GitHub? no <br>
+7. \Herd\ai-blog-assistant>php artisan make:model Blog -m (This dual-purpose Laravel Artisan Model Generator creates an Eloquent data model class called Blog. The -m flag instructs Laravel to automatically generate a matching database schema file, a migration script, inside database/migrations/) | https://laravel.com/docs/13.x/eloquent <br>
 8. \Herd\ai-blog-assistant>php artisan migrate (Instructs the framework's engine to review all unexecuted file blueprints inside database/migrations/ and run them against your active database server. When it discovers that ai_blog_assistant does not exist on MySQL yet, it prompts you to auto-create the raw database schema) | "Running Migrations" | https://laravel.com/docs/13.x/migrations <br>
-The database 'ai_blog_assistant' does not exist on the 'mysql' connection.
+-The database 'ai_blog_assistant' does not exist on the 'mysql' connection.
 Would you like to create it? yes <br>
 9. ai-blog-assistant>php artisan make:controller BlogController (Builds a standard PHP class template inside app/Http/Controllers/ via the Laravel Controller Generator, which will eventually route your incoming HTTP requests, process data payload logic, and load views.) "Writing Controllers" | https://laravel.com/docs/13.x/controllers <br>
 10. cd resources > cd views > mkdir blogs > cd blogs  > code . >
