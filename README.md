@@ -12,12 +12,12 @@ A full-stack Laravel web application that leverages artificial intelligence to h
 2. Form Validation: Built-in Laravel validation protecting input fields (i.e., minimum character length requirements, maximum limits). <br>
 3. Robust Error Handling: Utilizes `try-catch` blocks to capture API network failures or database issues, elegantly feeding errors back to the user without crashing. <br>
 4. Persistent Storage: Saves all generated prompts, metadata, and blog drafts inside a MySQL database for continuous access. <br>
-5. Responsive UI: Designed using a modern, clean Tailwind CSS layout. <br>
-<br>
-   -The Backend Framework uses Laravel (PHP)
-   -The Database is the MySQL
-   -The Frontend uses Blade Templates and Tailwind CSS
-   -The API Client is the OpenAI PHP SDK for Laravel
+5. Responsive UI: Designed using a modern, clean Tailwind CSS layout. <br><br>
+
+   -The Backend Framework uses Laravel (PHP) <br>
+   -The Database is the MySQL <br>
+   -The Frontend uses Blade Templates and Tailwind CSS <br>
+   -The API Client is the OpenAI PHP SDK for Laravel <br>
 
 ***Set Up Instructions*** <br>
 1. Start Laravel Herd Application <br>
