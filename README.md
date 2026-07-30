@@ -13,10 +13,11 @@ A full-stack Laravel web application that leverages artificial intelligence to h
 3. Robust Error Handling: Utilizes `try-catch` blocks to capture API network failures or database issues, elegantly feeding errors back to the user without crashing. <br>
 4. Persistent Storage: Saves all generated prompts, metadata, and blog drafts inside a MySQL database for continuous access. <br>
 5. Responsive UI: Designed using a modern, clean Tailwind CSS layout. <br>
-6. The Backend Framework uses Laravel (PHP)
-7. The Database is the MySQL
-8. The Frontend uses Blade Templates and Tailwind CSS
-9. The API Client is the OpenAI PHP SDK for Laravel
+<br>
+   -The Backend Framework uses Laravel (PHP)
+   -The Database is the MySQL
+   -The Frontend uses Blade Templates and Tailwind CSS
+   -The API Client is the OpenAI PHP SDK for Laravel
 
 ***Set Up Instructions*** <br>
 1. Start Laravel Herd Application <br>
@@ -64,7 +65,9 @@ DB_PASSWORD= what is your password?
 12. ```ai-blog-assistant>php artisan make:controller BlogController ```(Builds a standard PHP class template inside app/Http/Controllers/ via the Laravel Controller Generator, which will eventually route your incoming HTTP requests, process data payload logic, and load views.) "Writing Controllers" | https://laravel.com/docs/13.x/controllers <br>
 13. ```cd resources``` > ```cd views``` > ```mkdir blogs``` > ```cd blogs```  >``` code . ```>
 create resources\views\blogs\index.blade.php (Standard operating system terminal navigation that walks into your application template file directory, generates a dedicated folder named blogs, and points VS Code there. Also, generates a foundational file utilizing Laravel Blade Templates, which processes HTML combined with raw PHP data loops to display information on screen.) <br>
-Look at the checklist.
+
+
+**The code logic checklist** <br>
 - .env file has DB_CONNECTION, DB_PASSWORD etc., and OPENAI_API_URL, OPENAI_MODEL, OPENAI_API_KEY credentials filled.
 - up() function updated in database\migrations\date_create_blogs_table.php
 - Model is created, with $fillable in Models\Blog.php
