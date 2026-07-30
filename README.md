@@ -34,7 +34,7 @@ A full-stack Laravel web application that leverages artificial intelligence to h
 Open VS Code with ```code . ```( launches Visual Studio Code inside that specific environment) <br>
 5. Back in terminal command prompt at the top of folder: <br>
 ```\ai-blog-assistant> composer require openai-php/laravel ```(Utilizes the PHP dependency manager Composer to pull down the official community-maintained OpenAI PHP for Laravel package into your vendor file directory.) |1. "OpenAI PHP for Laravel" | https://laravel-news.com/package/openai-php-laravel | 2. "Packagist" Sandro Gehri - Nuno Maduro | https://packagist.org/packages/openai-php/laravel | 3. https://github.com/openai-php/laravel/blob/main/README.md |  <br>
-6.``` php artisan openai:install``` (Executes a package-specific command that copies a global openai.php configuration file directly into your application's /config)| "Get Started" | Sandro Gehri - Nuno Maduro | https://packagist.org/packages/openai-php/laravel<br>
+6. ``` php artisan openai:install``` (Executes a package-specific command that copies a global openai.php configuration file directly into your application's /config)| "Get Started" | Sandro Gehri - Nuno Maduro | https://packagist.org/packages/openai-php/laravel<br>
 -```OpenAI for Laravel, starring it on GitHub? no``` <br>
 7. Open the .env file and add the API Key.
  ```
