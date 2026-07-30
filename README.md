@@ -28,7 +28,7 @@ run npm install --ignore-scripts and npm run build? yes (Automatically triggers 
 4. cd ai-blog-assistant  (Moves your command line context directly into the root folder of the newly built app) <br>
 Open VS Code with code . ( launches Visual Studio Code inside that specific environment) <br>
 5. back in terminal command prompt at the top of folder: <br>
-\ai-blog-assistant> composer require openai-php/laravel (Utilizes the PHP dependency manager Composer to pull down the official community-maintained OpenAI PHP for Laravel package into your vendor file directory.) | "Packagist" Sandro Gehri - Nuno Maduro | https://packagist.org/packages/openai-php/laravel | https://github.com/openai-php/laravel/blob/main/README.md |  <br>
+\ai-blog-assistant> composer require openai-php/laravel (Utilizes the PHP dependency manager Composer to pull down the official community-maintained OpenAI PHP for Laravel package into your vendor file directory.) |1. "OpenAI PHP for Laravel" | https://laravel-news.com/package/openai-php-laravel | 2. "Packagist" Sandro Gehri - Nuno Maduro | https://packagist.org/packages/openai-php/laravel | 3. https://github.com/openai-php/laravel/blob/main/README.md |  <br>
 6. php artisan openai:install (Executes a package-specific command that copies a global openai.php configuration file directly into your application's /config)| "Get Started" | Sandro Gehri - Nuno Maduro | https://packagist.org/packages/openai-php/laravel<br>
 OpenAI for Laravel, starring it on GitHub? no <br>
 7. \Herd\ai-blog-assistant>php artisan make:model Blog -m (This dual-purpose Laravel Artisan Model Generator creates an Eloquent data model class called Blog. The -m flag instructs Laravel to automatically generate a matching database schema file (a migration script) inside database/migrations/)| https://laravel.com/docs/13.x/eloquent<br>
@@ -42,13 +42,13 @@ create resources\views\blogs\index.blade.php (Standard operating system terminal
 12. Interact with the "AI Blog Assistant" to create data. <br>
 13. Open mySQL client <br>
 enter password <br>
-mysql> SHOW DATABASES; <br>
-mysql> USE ai_blog_assistant; <br>
-mysql> SHOW TABLES; <br>
-mysql> SELECT id, title, created_at FROM blogs; <br>
+mysql> SHOW DATABASES; (A core MySQL Administrative Query that lists every active data schema group managed on your server engine instance.) | 15.7.7.15 | https://dev.mysql.com/doc/refman/8.4/en/show-databases.html<br>
+mysql> USE ai_blog_assistant; (Informs your SQL terminal connection that all upcoming data extraction queries should target this specific application's active workspace.) <br>
+mysql> SHOW TABLES; (Outputs a visual list of structural tables built inside your application) <br>
+mysql> SELECT id, title, created_at FROM blogs; ( A standard query that targets specific columns inside your blogs table to visually confirm that entries are being saved correctly by the app.) <br>
 optional** heavy output: mysql> SELECT content FROM blogs ORDER BY id DESC LIMIT 1; <br>
-mysql> exit; <br>
-
+mysql> exit; (Closes the communication pipe safely and logs you off from the MySQL server terminal.) <br>
+"Chapter 5 Tutorial" | https://dev.mysql.com/doc/refman/8.4/en/database-use.html
 ***Screenshots***
 <img width="1366" height="689" alt="Screenshot (1787)" src="https://github.com/user-attachments/assets/4ca9c6ac-82ed-4298-88e6-842ab626d9c0" />
 
