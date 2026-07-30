@@ -15,7 +15,7 @@ A full-stack Laravel web application that leverages artificial intelligence to h
 5. Responsive UI: Designed using a modern, clean Tailwind CSS layout. <br>
 6. The Backend Framework uses Laravel (PHP)
 7. The Database is the MySQL
-8. The Frontend uses Blade Templates & Tailwind CSS
+8. The Frontend uses Blade Templates and Tailwind CSS
 9. The API Client is the OpenAI PHP SDK for Laravel
 
 ***Set Up Instructions*** <br>
@@ -35,16 +35,45 @@ Open VS Code with ```code . ```( launches Visual Studio Code inside that specifi
 ```\ai-blog-assistant> composer require openai-php/laravel ```(Utilizes the PHP dependency manager Composer to pull down the official community-maintained OpenAI PHP for Laravel package into your vendor file directory.) |1. "OpenAI PHP for Laravel" | https://laravel-news.com/package/openai-php-laravel | 2. "Packagist" Sandro Gehri - Nuno Maduro | https://packagist.org/packages/openai-php/laravel | 3. https://github.com/openai-php/laravel/blob/main/README.md |  <br>
 6.``` php artisan openai:install``` (Executes a package-specific command that copies a global openai.php configuration file directly into your application's /config)| "Get Started" | Sandro Gehri - Nuno Maduro | https://packagist.org/packages/openai-php/laravel<br>
 -```OpenAI for Laravel, starring it on GitHub? no``` <br>
-7. ```\Herd\ai-blog-assistant>php artisan make:model Blog -m ```(This dual-purpose Laravel Artisan Model Generator creates an Eloquent data model class called Blog. The -m flag instructs Laravel to automatically generate a matching database schema file, a migration script, inside database/migrations/) | https://laravel.com/docs/13.x/eloquent <br>
-8. ```\Herd\ai-blog-assistant>php artisan migrate ```(Instructs the framework's engine to review all unexecuted file blueprints inside database/migrations/ and run them against your active database server. When it discovers that ai_blog_assistant does not exist on MySQL yet, it prompts you to auto-create the raw database schema) | "Running Migrations" | https://laravel.com/docs/13.x/migrations <br>
+7. Open the .env file and add the API Key.
+ ```
+OPENAI_API_KEY=
+OPENAI_ORGANIZATION=
+```
+or copy and paste these variables into the .env file
+```
+OPENAI_API_URL=https://api.openai.com/v1
+OPENAI_MODEL=gpt-4o-mini
+OPENAI_API_KEY=sk-proj-xxx-xxx-xxx
+```
+8. Set up the database section of the .env file
+ ```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=ai_blog_assistant
+DB_USERNAME=root
+DB_PASSWORD= what is your password?
+ ```
+9. Open the the database /migrations file named "date_create_blogs_table.php" and update the up() function this will automatically create a new table in your database named blogs with five specific columns. | "Migration Structure" | https://laravel.com/docs/5.8/migrations <br>
+
+10. ```\Herd\ai-blog-assistant>php artisan make:model Blog -m ```(This dual-purpose Laravel Artisan Model Generator creates an Eloquent data model class called Blog. The -m flag instructs Laravel to automatically generate a matching database schema file, a migration script, inside database/migrations/) | https://laravel.com/docs/13.x/eloquent <br>
+11. ```\Herd\ai-blog-assistant>php artisan migrate ```(Instructs the framework's engine to review all unexecuted file blueprints inside database/migrations/ and run them against your active database server. When it discovers that ai_blog_assistant does not exist on MySQL yet, it prompts you to auto-create the raw database schema) | "Running Migrations" | https://laravel.com/docs/13.x/migrations <br>
 -```The database 'ai_blog_assistant' does not exist on the 'mysql' connection.```
 ```Would you like to create it? yes ```<br>
-9. ```ai-blog-assistant>php artisan make:controller BlogController ```(Builds a standard PHP class template inside app/Http/Controllers/ via the Laravel Controller Generator, which will eventually route your incoming HTTP requests, process data payload logic, and load views.) "Writing Controllers" | https://laravel.com/docs/13.x/controllers <br>
-10. ```cd resources``` > ```cd views``` > ```mkdir blogs``` > ```cd blogs```  >``` code . ```>
+12. ```ai-blog-assistant>php artisan make:controller BlogController ```(Builds a standard PHP class template inside app/Http/Controllers/ via the Laravel Controller Generator, which will eventually route your incoming HTTP requests, process data payload logic, and load views.) "Writing Controllers" | https://laravel.com/docs/13.x/controllers <br>
+13. ```cd resources``` > ```cd views``` > ```mkdir blogs``` > ```cd blogs```  >``` code . ```>
 create resources\views\blogs\index.blade.php (Standard operating system terminal navigation that walks into your application template file directory, generates a dedicated folder named blogs, and points VS Code there. Also, generates a foundational file utilizing Laravel Blade Templates, which processes HTML combined with raw PHP data loops to display information on screen.) <br>
-11. Open the browser and enter the URL: ```http://ai-blog-assistant.test/``` (This is an auto-configured local domain mapping managed on your machine by Laravel Herd's Site Management. It serves your project instantly without requiring you to run a manual server execution script.) <br>
-12. Interact with the "AI Blog Assistant" to create data. <br>
-13. Open mySQL client <br>
+Look at the checklist.
+- .env file has DB_CONNECTION, DB_PASSWORD etc., and OPENAI_API_URL, OPENAI_MODEL, OPENAI_API_KEY credentials filled.
+- up() function updated in database\migrations\date_create_blogs_table.php
+- Model is created, with $fillable in Models\Blog.php
+- BlogController.php is created at app/Http/Controllers/BlogController.php
+- Define Routing and connect your web URLs to the controller methods in routes/web.php.
+- build a user interface with resources/views/blogs/index.blade.php
+14. Open the browser and enter the URL: ```http://ai-blog-assistant.test/``` (This is an auto-configured local domain mapping managed on your machine by Laravel Herd's Site Management. It serves your project instantly without requiring you to run a manual server execution script.) <br>
+15. Interact with the "AI Blog Assistant" to create data. <br>
+16. Open mySQL client <br>
 enter password <br>
 mysql> ```SHOW DATABASES; ```(A core MySQL Administrative Query that lists every active data schema group managed on your server engine instance.) | 15.7.7.15 | https://dev.mysql.com/doc/refman/8.4/en/show-databases.html<br>
 mysql> ```USE ai_blog_assistant; ```(Informs your SQL terminal connection that all upcoming data extraction queries should target this specific application's active workspace.) <br>
