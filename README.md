@@ -68,6 +68,7 @@ create resources\views\blogs\index.blade.php (Standard operating system terminal
 
 
 **The code logic checklist** <br>
+- "How to obtain an OPENAI key?" https://github.com/Ghabaei-Behzad/cs85_module12/blob/main/README.md
 - .env file has DB_CONNECTION, DB_PASSWORD etc., and OPENAI_API_URL, OPENAI_MODEL, OPENAI_API_KEY credentials filled.
 - up() function updated in database\migrations\date_create_blogs_table.php
 - Model is created, with $fillable in Models\Blog.php
