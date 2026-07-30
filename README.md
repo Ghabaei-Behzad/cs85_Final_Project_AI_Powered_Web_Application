@@ -13,11 +13,15 @@ A full-stack Laravel web application that leverages artificial intelligence to h
 3. Robust Error Handling: Utilizes `try-catch` blocks to capture API network failures or database issues, elegantly feeding errors back to the user without crashing. <br>
 4. Persistent Storage: Saves all generated prompts, metadata, and blog drafts inside a MySQL database for continuous access. <br>
 5. Responsive UI: Designed using a modern, clean Tailwind CSS layout. <br>
+6. The Backend Framework uses Laravel (PHP)
+7. The Database is the MySQL
+8. The Frontend uses Blade Templates & Tailwind CSS
+9. The API Client is the OpenAI PHP SDK for Laravel
 
 ***Set Up Instructions*** <br>
 1. Start Laravel Herd Application <br>
-2. cd Herd (Changes your terminal's current directory to the folder where Laravel Herd manages your local sites.) <br>
-3. laravel new ai-blog-assistant (Create your new Laravel project framework, bootstrap a new framework skeleton) | "Creating An Application Using A Starter Kit" | https://laravel.com/docs/13.x/starter-kits  <br>
+2. ```cd Herd``` (Changes your terminal's current directory to the folder where Laravel Herd manages your local sites.) <br>
+3. ```laravel new ai-blog-assistant``` (Create your new Laravel project framework, bootstrap a new framework skeleton) | "Creating An Application Using A Starter Kit" | https://laravel.com/docs/13.x/starter-kits  <br>
 -Update now? No <br>
 -Starter Kit? None (Skips installing pre-packaged UI frameworks like Laravel Breeze or Jetstream so you can build your front end from scratch.) <br>
 -Testing Framework? Pest (Configures your testing suite to utilize Pest PHP, a highly expressive, elegant PHP testing framework.) <br>
@@ -47,8 +51,8 @@ mysql> USE ai_blog_assistant; (Informs your SQL terminal connection that all upc
 mysql> SHOW TABLES; (Outputs a visual list of structural tables built inside your application) <br>
 mysql> SELECT id, title, created_at FROM blogs; ( A standard query that targets specific columns inside your blogs table to visually confirm that entries are being saved correctly by the app.) <br>
 optional** heavy output: mysql> SELECT content FROM blogs ORDER BY id DESC LIMIT 1; <br>
-mysql> exit; (Closes the communication pipe safely and logs you off from the MySQL server terminal.) <br>
-"Chapter 5 Tutorial" | https://dev.mysql.com/doc/refman/8.4/en/database-use.html
+mysql> exit; (Closes the communication pipe safely and logs you off from the MySQL server terminal.) "Chapter 5 Tutorial" | https://dev.mysql.com/doc/refman/8.4/en/database-use.html <br>
+
 ***Screenshots***
 <img width="1366" height="689" alt="Screenshot (1787)" src="https://github.com/user-attachments/assets/4ca9c6ac-82ed-4298-88e6-842ab626d9c0" />
 
