@@ -18,7 +18,7 @@ A full-stack Laravel web application that leverages artificial intelligence to h
 1. Start Laravel Herd Application <br>
 2. cd Herd (Changes your terminal's current directory to the folder where Laravel Herd manages your local sites.) <br>
 3. laravel new ai-blog-assistant (Create your new Laravel project framework, bootstrap a new framework skeleton) | "Creating An Application Using A Starter Kit" | https://laravel.com/docs/13.x/starter-kits  <br>
-Update now? No <br>
+****Update now? No**** <br>
 Starter Kit? None (Skips installing pre-packaged UI frameworks like Laravel Breeze or Jetstream so you can build your front end from scratch.) <br>
 Testing Framework? Pest (Configures your testing suite to utilize Pest PHP, a highly expressive, elegant PHP testing framework.) <br>
 Laravel Boost AI? No <br>
