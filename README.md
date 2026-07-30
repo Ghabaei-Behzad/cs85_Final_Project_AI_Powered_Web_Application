@@ -94,7 +94,7 @@ mysql> ```exit; ```(Closes the communication pipe safely and logs you off from t
 
 <img width="1366" height="725" alt="Screenshot (1790)" src="https://github.com/user-attachments/assets/00352cb9-4716-4b57-94aa-bd138a2e0886" />
 
-***Include a short screen recording*** <br>
+***Include a short screen recording (10 MB only)*** <br>
 https://github.com/user-attachments/assets/42bd38b9-f7ac-451c-b055-29d8c4cbc992
 
 
