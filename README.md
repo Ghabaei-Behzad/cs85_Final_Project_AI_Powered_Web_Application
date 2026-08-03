@@ -65,7 +65,7 @@ DB_DATABASE=ai_blog_assistant
 DB_USERNAME=root
 DB_PASSWORD= what is your password?
  ```
-9. Open the the database /migrations file named "date_create_blogs_table.php" and update the up() function this will automatically create a new table in your database named blogs with five specific columns. | "Migration Structure" | https://laravel.com/docs/5.8/migrations <br>
+9. Open the the database /migrations file named "date_create_blogs_table.php" and update the up() function. This will automatically create a new table in your database named blogs with five specific columns. | "Migration Structure" | https://laravel.com/docs/5.8/migrations <br>
 
 10. ```\Herd\ai-blog-assistant>php artisan make:model Blog -m ```(This dual-purpose Laravel Artisan Model Generator creates an Eloquent data model class called Blog. The -m flag instructs Laravel to automatically generate a matching database schema file, a migration script, inside database/migrations/) | https://laravel.com/docs/13.x/eloquent <br>
 11. ```\Herd\ai-blog-assistant>php artisan migrate ```(Instructs the framework's engine to review all unexecuted file blueprints inside database/migrations/ and run them against your active database server. When it discovers that ai_blog_assistant does not exist on MySQL yet, it prompts you to auto-create the raw database schema) | "Running Migrations" | https://laravel.com/docs/13.x/migrations <br>
